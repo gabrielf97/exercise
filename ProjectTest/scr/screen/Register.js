@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, TextInput, View, Button, Image} from 'react-native';
-import {Actions} from 'react-native-router-flux';
-import {connect} from 'react-redux';
+import {Actions} from 'react-native-router-flux'
 
-export class Login extends Component<Props> {
+export default class Register extends Component<Props> {
    
   render() {
 
@@ -12,26 +11,20 @@ export class Login extends Component<Props> {
           <Image source={require('../images/TronLogo.png')} style={styles.Logo} />            
              
               <View>
-                <TextInput value={this.props.email} style={styles.Input} placeholder="Insira seu usuário"/>
+                <TextInput style={styles.Input} placeholder="Primeiro nome"/>
 
-                <TextInput style={styles.Input} placeholder="Insira sua senha"/>         
+                <TextInput style={styles.Input} placeholder="Ultimo nome"/>         
+
+                <TextInput style={styles.Input} placeholder="E-mail"/> 
               </View>
 
               <View style={styles.ButtonPerson}>
                 <Button  
-                onPress={() => Actions.Home()}
-                title="Entrar" 
+                onPress={() => Actions.Login()}
+                title="Cadastrar-se" 
                 color="#2E8B57"
                 />
-              </View> 
-
-              <View style={styles.ButtonPerson}>
-                <Button 
-                onPress={() => Actions.Register()}
-                title="Cadastrar" 
-                color="#2E8B57"
-                />        
-              </View>   
+              </View>              
         
       </View>
     );
@@ -61,13 +54,3 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start'
   },
 });
-
-const mapStateToProps = (state) => {
-    return {
-        email: state.Login.email,
-        senha: state.Login.passowrd
-    };
-};
-
-const LoginConnect = connect(mapStateToProps)(Login);
-export default LoginConnect;

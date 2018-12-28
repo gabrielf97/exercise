@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Router, Scene} from 'react-native-router-flux';
 import Login from '../screen/Login';
 import Home from '../screen/Home';
+import Register from '../screen/Register';
 
 const Routes = () => {
 
@@ -11,8 +12,7 @@ const Routes = () => {
             <Scene key="root">
 
                 <Scene 
-                    key="Login"
-                    title="Login"
+                    key="Login"                   
                     component={Login}
                 />
 
@@ -20,6 +20,12 @@ const Routes = () => {
                     key="Home"
                     title="Home"
                     component={Home}
+                />
+
+                <Scene 
+                    key="Register"
+                    title="Cadastro"
+                    component={Register}
                 />
 
             </Scene>

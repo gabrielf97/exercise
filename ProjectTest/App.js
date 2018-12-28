@@ -1,15 +1,24 @@
+//Importes do sistema
 import React, {Component} from 'react';
-import {Platform, StyleSheet, TextInput, View, Button, Image} from 'react-native';
-import Routes from './scr/router/Router'
+
+//Importes criados
+import Routes from './scr/router/Router';
+import Reducers from './scr/reducers/Reducers'
+//
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+
+
+let store = createStore(Reducers);
 
 export default class App extends Component<Props> {
  
   render() {
 
     return (
-
-      <Routes/>
-    
+      <Provider store={store}>
+        <Routes/>
+      </Provider>
       );
   }
 }
