@@ -1,46 +1,16 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, TextInput, View, Button, Image} from 'react-native';
+import Routes from './scr/router/Router'
 
 export default class App extends Component<Props> {
+ 
   render() {
+
     return (
-      <View  style={styles.Body}> 
-          <Image source={require('./TronLogo.png')} style={styles.Logo} />
-            
-        <View>  
-        <TextInput style={styles.Input} placeholder="Insira seu usuário"/>
-        <TextInput style={styles.Input} placeholder="Insira sua senha"/>
-          <View style={styles.ButtonPerson} >
-            <Button title="Entrar" color="#2E8B57"/>
-          </View>
-        </View>
-      </View>
-    );
+
+      <Routes/>
+    
+      );
   }
 }
 
-const styles = StyleSheet.create({
-  Body:{
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: "#00FF7F",
-    padding: 10,
-  },
-  Input:{
-    height: 60, 
-    margin: 5, 
-    padding: 10,
-    backgroundColor: "#FFFFFF",
-  },
-  ButtonPerson:{
-    padding: 10,
-    color:"#808080",
-    
-  },
-  Logo:{
-    width: 250, 
-    height: 250,    
-    resizeMode: 'contain',   
-    alignItems: 'center'
-  },
-});
