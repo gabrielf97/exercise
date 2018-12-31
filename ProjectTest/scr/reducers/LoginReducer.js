@@ -8,7 +8,7 @@ const LoginReducer = (state = [], action) => {
     if(state.length == 0){
         return initialState;
     }else
-    return state
+    return state;
 };
 
 export default LoginReducer;

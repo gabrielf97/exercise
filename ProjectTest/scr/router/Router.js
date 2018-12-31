@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import {Router, Scene} from 'react-native-router-flux';
 import Login from '../screen/Login';
 import Home from '../screen/Home';
+import Planetas from '../screen/Planetas';
 import Register from '../screen/Register';
 
 const Routes = () => {
-
+    
     return(
         <Router>
 
@@ -26,6 +27,12 @@ const Routes = () => {
                     key="Register"
                     title="Cadastro"
                     component={Register}
+                />
+
+                <Scene 
+                    key="Planetas"
+                    title="Planetas"
+                    component={Planetas}
                 />
 
             </Scene>

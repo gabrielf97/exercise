@@ -1,15 +1,16 @@
-//Importes do sistema
+//Imports system
 import React, {Component} from 'react';
 
-//Importes criados
+//Imports files created
 import Routes from './scr/router/Router';
 import Reducers from './scr/reducers/Reducers'
 //
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import ReduxPromise from 'redux-promise';
+import {createStore, applyMiddleware} from 'redux';
 
-
-let store = createStore(Reducers);
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+let store = createStoreWithMiddleware(Reducers);
 
 export default class App extends Component<Props> {
  

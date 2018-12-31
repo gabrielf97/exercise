@@ -11,7 +11,7 @@ export default class Home extends Component<Props> {
       <View  style={styles.Body}> 
         <Text 
         style={styles.TextLogo} 
-        onPress={() => Actions.Login()}
+        onPress={() => Actions.Planetas()}
         >Seja bem vindo a Tron Informatica
         </Text>
       </View>
