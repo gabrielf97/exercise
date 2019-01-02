@@ -4,7 +4,7 @@ import Login from '../screen/Login';
 import Home from '../screen/Home';
 import Planetas from '../screen/Planetas';
 import Register from '../screen/Register';
-
+import PlanetasInfo from '../screen/PlanetasInfo'
 const Routes = () => {
     
     return(
@@ -33,6 +33,12 @@ const Routes = () => {
                     key="Planetas"
                     title="Planetas"
                     component={Planetas}
+                />
+
+                <Scene 
+                    key="PlanetasInfo"
+                    title="PlanetasInfo"
+                    component={PlanetasInfo}
                 />
 
             </Scene>

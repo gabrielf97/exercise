@@ -9,3 +9,12 @@ export const obterPlanetas = () => {
         payload: request
     };
 };
+
+export const obterPlaneta = () => {
+    const request = axios.get('https://swapi.co/api/planets/2/');
+
+    return {
+        type:'OBTER_PLANETA',
+        payload: request
+    };
+};
