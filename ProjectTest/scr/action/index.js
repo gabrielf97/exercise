@@ -18,3 +18,12 @@ export const obterPlaneta = () => {
         payload: request
     };
 };
+
+export const mudarTela = (planeta) =>{
+
+    return({
+        type:'SET_PLANETA',
+        payload: planeta
+    }
+    )
+}
